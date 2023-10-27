@@ -20,18 +20,23 @@ runs:
 
     - name: Install dependencies
       run: yarn install --frozen-lockfile
+      shell: bash
 
     - name: Check types
       run: yarn type-check
+      shell: bash
 
     - name: Check linting
       run: yarn lint
+      shell: bash
 
     - name: Run tests
       run: yarn test:ci
+      shell: bash
 
     - name: Build package
       run: yarn build
+      shell: bash
 
     - name: Check commits messages
       uses: wagoid/commitlint-github-action@v5
