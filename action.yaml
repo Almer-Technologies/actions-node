@@ -4,9 +4,6 @@ description: Build and run tests on node
 
 runs:
   using: composite
-  timeout-minutes: 10
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -20,8 +17,6 @@ runs:
         cache: 'yarn'
         registry-url: 'https://npm.pkg.github.com'
         scope: '@almer-technologies'
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Install dependencies
       run: yarn install --frozen-lockfile
