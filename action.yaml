@@ -35,3 +35,6 @@ runs:
 
     - name: Check commits messages
       uses: wagoid/commitlint-github-action@v5
+
+    - run: echo "DONE"
+      shell: bash
