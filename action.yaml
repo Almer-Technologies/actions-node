@@ -17,6 +17,7 @@ runs:
         cache: 'yarn'
         registry-url: 'https://npm.pkg.github.com'
         scope: '@almer-technologies'
+        always-auth: true
 
     - name: Install dependencies
       run: yarn install --frozen-lockfile
